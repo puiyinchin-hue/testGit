@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <title>Billing</title>
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+    <div class="container">
+
+        <h2>Billing</h2>
+
+        <form
+            method="POST"
+            action="/billing/add"
+        >
+
+            Appointment ID:
+
+            <input
+                type="number"
+                name="appointment_id"
+                required
+            >
+
+            <br><br>
+
+
+            Amount:
+
+            <input
+                type="number"
+                name="amount"
+                step="0.01"
+                required
+            >
+
+            <br><br>
+
+
+            Payment Status:
+
+            <select name="payment_status">
+
+                <option value="Unpaid">
+                    Unpaid
+                </option>
+
+                <option value="Paid">
+                    Paid
+                </option>
+
+            </select>
+
+            <br><br>
+
+
+            <button type="submit">
+                Add Bill
+            </button>
+
+        </form>
+
+        <br>
+
+        <a href="/billing">
+            View Billing
+        </a>
+
+        <br><br>
+
+        <a href="/">
+            Back to Home
+        </a>
+
+    </div>
+
+</body>
+
+</html>

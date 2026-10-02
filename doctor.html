@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <title>Add Doctor</title>
+    <link rel="stylesheet" href="style.css">
+    <body>
+        <form method="POST" action="/doctor/add">
+
+            Name:
+            <input
+                type="text"
+                name="name"
+                placeholder="e.g. Dr. John Tan"
+                required
+            >
+
+            <br><br>
+
+            Specialization:
+            <select name="specialization" required>
+                <option value="" disabled selected>Select Specialization</option>
+                <option value="General Medicine">General Medicine</option>
+                <option value="Cardiology">Cardiology (Heart)</option>
+                <option value="Dermatology">Dermatology (Skin)</option>
+                <option value="Pediatrics">Pediatrics (Children)</option>
+                <option value="Orthopedics">Orthopedics (Bones & Joints)</option>
+                <option value="Neurology">Neurology (Brain & Nerves)</option>
+                <option value="Ophthalmology">Ophthalmology (Eyes)</option>
+                <option value="ENT">ENT (Ear, Nose, Throat)</option>
+                <option value="Gynecology">Gynecology & Obstetrics</option>
+                <option value="Psychiatry">Psychiatry</option>
+            </select>
+
+            <br><br>
+
+            Phone:
+            <input
+                type="text"
+                name="phone"
+                placeholder="e.g. +6012-3456789"
+            >
+
+            <br><br>
+
+            Email:
+            <input
+                type="email"
+                name="email"
+                placeholder="e.g. dr.johntan@gmail.com"
+            >
+
+            <br><br>
+
+            <button type="submit">
+                Add Doctor
+            </button>
+   
+<div class="back-home-container">
+    <a href="/" class="btn-back-home">
+        <i class="fa-solid fa-arrow-left"></i> Back to Home
+    </a>
+</div>
+        </form>
+ </div>
+
+
+</body> 
+
+</html>

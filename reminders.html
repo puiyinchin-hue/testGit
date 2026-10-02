@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Appointment Reminders</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px;">
+            <h2>🔔 Appointment Reminders</h2>
+            <div class="back-home-container">
+                <a href="/" class="btn-action" style="background-color: #6c757d; font-weight: bold; text-decoration: none; padding: 10px 16px; border-radius: 6px;">
+                    <i class="fa-solid fa-house"></i> Back to Home
+                </a>
+            </div>
+        </div>
+
+        <div class="table-container">
+            <table class="patient-table">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Patient Name</th>
+                        <th>Doctor Name</th>
+                        <th>Appointment Date & Time</th>
+                        <th>Reminder Message</th>
+                    </tr>
+                </thead>
+                <tbody id="reminderList">
+                    <tr>
+                        <td colspan="5" style="text-align: center; padding: 20px;">Loading reminders...</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+    </div>
+
+    <script>
+        fetch("/api/reminders")
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error("Unable to load reminders.");
+                }
+                return response.json();
+            })
+            .then(reminders => {
+                const reminderList = document.getElementById("reminderList");
+                reminderList.innerHTML = "";
+
+                if (reminders.length === 0) {
+                    reminderList.innerHTML = `
+                        <tr>
+                            <td colspan="5" style="text-align: center; padding: 20px;">No appointment reminders found.</td>
+                        </tr>
+                    `;
+                    return;
+                }
+
+                reminders.forEach(reminder => {
+                    const row = document.createElement("tr");
+
+                    const formattedDate = reminder.appointment_date 
+                        ? new Date(reminder.appointment_date).toISOString().split('T')[0] 
+                        : 'N/A';
+
+                    row.innerHTML = `
+                        <td>#${reminder.id}</td>
+                        <td><b>${reminder.patient_name || 'N/A'}</b></td>
+                        <td>${reminder.doctor_name || 'N/A'}</td>
+                        <td>${formattedDate} ${reminder.appointment_time || ''}</td>
+                        <td>${reminder.reminder_message}</td>
+                    `;
+
+                    reminderList.appendChild(row);
+                });
+            })
+            .catch(error => {
+                console.error(error);
+                document.getElementById("reminderList").innerHTML = `
+                    <tr>
+                        <td colspan="5" style="text-align: center; padding: 20px; color: #dc3545;">
+                            <b>Error:</b> Unable to load reminders. Please try again later.
+                        </td>
+                    </tr>
+                `;
+            });
+    </script>
+
+</body>
+
+</html>

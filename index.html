@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Healthcare Management System</title>
+    
+
+    <link rel="stylesheet" href="https://localhost:3000">
+    
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="container">
+
+
+        <header class="hospital-header">
+            <div class="brand-logo">
+                <i class="fa-solid fa-hospital brand-icon"></i>
+                <div class="brand-text">
+                    <span class="brand-title">HEALTHCARE MEDICAL CENTRE</span>
+                    <br>
+                    <span class="brand-sub">IPOH • Healthcare Management System </span>
+                </div>
+            </div>
+            <div class="emergency-contact">
+                <i class="fa-solid fa-phone-volume emergency-icon"></i>
+                <div>
+                    <small>24/7 Emergency Line</small>
+                    <strong>+605-520 8888</strong>
+                </div>
+            </div>
+            <br>
+            <br>
+        </header>
+
+        <nav class="navbar">
+
+            <a href="/" class="nav-item-active"><i class="fa-solid fa-house"></i> Home</a>
+
+            <div class="dropdown">
+                <button class="dropbtn"><i class="fa-solid fa-hospital-user"></i> Patient <i class="fa-solid fa-chevron-down arrow-icon"></i></button>
+                <div class="dropdown-content">
+                    <a href="/patient.html"><i class="fa-solid fa-user-plus"></i> Patient Registration</a>
+                    <a href="/patients"><i class="fa-solid fa-id-card"></i> Patient Records</a>
+                </div>
+            </div>
+
+            <div class="dropdown">
+                <button class="dropbtn"><i class="fa-solid fa-user-doctor"></i> Doctor <i class="fa-solid fa-chevron-down arrow-icon"></i></button>
+                <div class="dropdown-content">
+                    <a href="/doctor.html"><i class="fa-solid fa-user-gear"></i> Add Doctor</a>
+                    <a href="/doctors"><i class="fa-solid fa-user-nurse"></i> Doctor List</a>
+                    <a href="/schedule"><i class="fa-solid fa-calendar-days"></i> Doctor Schedule</a>
+                    <a href="/consultation.html"><i class="fa-solid fa-file-medical"></i> Consultation Notes</a>
+                    <a href="/consultations"><i class="fa-solid fa-clipboard-list"></i> View Consultations</a>
+                </div>
+            </div>
+
+            <div class="dropdown">
+                <button class="dropbtn"><i class="fa-solid fa-calendar-check"></i> Appointment <i class="fa-solid fa-chevron-down arrow-icon"></i></button>
+                <div class="dropdown-content">
+                    <a href="/availability"><i class="fa-solid fa-clock"></i> View Availability</a>
+                    <a href="/appointments"><i class="fa-solid fa-list-check"></i> Appointment List</a>
+                    <a href="/appointment.html"><i class="fa-solid fa-calendar-plus"></i> Book Appointment</a>
+                    <a href="/reminders.html"><i class="fa-solid fa-bell"></i> Appointment Reminders</a>
+                </div>
+            </div>
+
+            <div class="dropdown">
+                <button class="dropbtn"><i class="fa-solid fa-file-invoice-dollar"></i> Billing <i class="fa-solid fa-chevron-down arrow-icon"></i></button>
+                <div class="dropdown-content">
+                    <a href="/billing.html"><i class="fa-solid fa-receipt"></i> Add Billing</a>
+                    <a href="/billing"><i class="fa-solid fa-wallet"></i> View Billing</a>
+                </div>
+            </div>
+
+        </nav>
+
+        <div class="welcome-banner">
+            <h1>Healthcare Appointment & Patient Management System</h1>
+            <p>Welcome to Healthcare Medical Centre Ipoh portal. Manage patients, doctor schedules, appointments, and billing seamlessly with humanised care.</p>
+        </div>
+
+        <div class="quick-actions-section">
+            <h2><i class="fa-solid fa-bolt action-title-icon"></i> Quick Actions</h2>
+            <div class="action-buttons">
+                <a href="/appointment.html" class="action-btn primary"><i class="fa-solid fa-plus"></i> Book Appointment</a>
+                <a href="/patient.html" class="action-btn primary"><i class="fa-solid fa-user-plus"></i> Register Patient</a>
+                <a href="/doctor.html" class="action-btn secondary"><i class="fa-solid fa-user-doctor"></i> Add Doctor</a>
+                <a href="/billing.html" class="action-btn secondary"><i class="fa-solid fa-file-invoice"></i> Create Bill</a>
+            </div>
+        </div>
+
+        <div class="info-section">
+            <h3><i class="fa-solid fa-bullhorn"></i> Recent System Notifications</h3>
+            <ul class="info-list">
+                <li><i class="fa-solid fa-circle-info notify-icon"></i> <strong>📌 Appointment Reminder:</strong> 3 appointments scheduled for this afternoon.</li>
+                <li><i class="fa-solid fa-user-clock notify-icon"></i> <strong>📌 Doctor Availability:</strong> Dr. Tan updated availability for tomorrow.</li>
+                <li><i class="fa-solid fa-check-circle notify-icon"></i> <strong>📌 Billing Status:</strong> 2 new bills generated successfully.</li>
+            </ul>
+        </div>
+
+        <div class="info-section" style="margin-top: 35px;">
+            <h3><i class="fa-solid fa-stethoscope"></i> Specialist Departments Overview</h3>
+            
+            <div class="department-grid">
+                <div class="dept-card">
+                    <h4><i class="fa-solid fa-heart-pulse dept-icon"></i>🫀  Cardiology</h4>
+                    <p>Comprehensive cardiovascular care, diagnostic ECG, and heart health screening.</p>
+                </div>
+                <div class="dept-card">
+                    <h4><i class="fa-solid fa-bone dept-icon"></i>🦴  Orthopaedics & Trauma</h4>
+                    <p>Specialised care for joint replacements, sports injuries, and spine conditions.</p>
+                </div>
+                <div class="dept-card">
+                    <h4><i class="fa-solid fa-baby dept-icon"></i>👶  Paediatrics</h4>
+                    <p>Dedicated child healthcare, immunisation, and developmental monitoring.</p>
+                </div>
+                <div class="dept-card">
+                    <h4><i class="fa-solid fa-person-pregnant dept-icon"></i>🤰  Obstetrics & Gynaecology</h4>
+                    <p>Complete maternity care, gynaecological surgeries, and women's wellness.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="info-section" style="margin-top: 25px;">
+            <h3><i class="fa-solid fa-user-doctor"></i> Resident Doctors Directory</h3>
+            
+            <div class="doctor-list-container">
+                <div class="record botani-style">
+                    <div class="doc-avatar"><i class="fa-solid fa-user-md"></i></div>
+                    <div class="doc-details">
+                        <strong>Dr. Chong Kai Weng</strong>
+                        <span class="dept-badge"><i class="fa-solid fa-bone"></i> 🦴 Orthopaedics & Traumatology</span>
+                        <small><i class="fa-solid fa-phone"></i> +605-5208888 &nbsp;|&nbsp; <i class="fa-solid fa-envelope"></i> dr.chong@gmail.com.my</small>
+                    </div>
+                </div>
+
+                <div class="record botani-style">
+                    <div class="doc-avatar"><i class="fa-solid fa-user-md"></i></div>
+                    <div class="doc-details">
+                        <strong>Dr. Michelle Lim</strong>
+                        <span class="dept-badge"><i class="fa-solid fa-person-pregnant"></i> 🤰 Obstetrics & Gynaecology</span>
+                        <small><i class="fa-solid fa-phone"></i> +605-5208889 &nbsp;|&nbsp; <i class="fa-solid fa-envelope"></i> dr.michelle@gmail.com.my</small>
+                    </div>
+                </div>
+
+                <div class="record botani-style">
+                    <div class="doc-avatar"><i class="fa-solid fa-user-md"></i></div>
+                    <div class="doc-details">
+                        <strong>Dr. David Arul</strong>
+                        <span class="dept-badge"><i class="fa-solid fa-heart-pulse"></i> 🫀 Cardiology</span>
+                        <small><i class="fa-solid fa-phone"></i> +605-5208890 &nbsp;|&nbsp; <i class="fa-solid fa-envelope"></i> dr.david@gmail.com.my</small>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+</body>
+
+</html>

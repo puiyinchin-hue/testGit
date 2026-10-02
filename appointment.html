@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <title>Book Appointment</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <script src="script.js"></script>
+
+</head>
+
+<body>
+
+    <div class="container">
+
+        <h2>Book Appointment</h2>
+
+        <form
+            method="POST"
+            action="/appointment"
+            onsubmit="return checkAppointment()"
+        >
+
+            Patient ID:
+
+            <input
+                type="number"
+                name="patient_id"
+                required
+            >
+
+            <br><br>
+
+
+            Doctor ID:
+
+            <input
+                type="number"
+                name="doctor_id"
+                required
+            >
+
+            <br><br>
+
+
+            Appointment Date:
+
+            <input
+                type="date"
+                id="appointment_date"
+                name="appointment_date"
+                required
+            >
+
+            <br><br>
+
+
+            Appointment Time:
+
+            <input
+                type="time"
+                id="appointment_time"
+                name="appointment_time"
+                required
+            >
+
+            <br><br>
+
+
+            Reason:
+
+            <input
+                type="text"
+                name="reason"
+                required
+            >
+
+            <br><br>
+
+
+            <button type="submit">
+                Book Appointment
+            </button>
+  <div class="back-home-container">
+    <a href="/" class="btn-back-home">
+        <i class="fa-solid fa-arrow-left"></i> Back to Home
+    </a>
+</div>
+        </form>
+
+        <br>
+
+        <a href="/appointments">
+            View Appointments
+        </a>
+
+        <br><br>
+
+      
+    </div>
+
+</body>
+
+</html>

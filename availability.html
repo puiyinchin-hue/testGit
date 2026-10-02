@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <title>Doctor Availability</title>
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+    <div class="container">
+
+        <h2>Doctor Availability</h2>
+
+        <form
+            method="POST"
+            action="/availability/add"
+        >
+
+            Doctor ID:
+
+            <input
+                type="number"
+                name="doctor_id"
+                required
+            >
+
+            <br><br>
+
+
+            Available Date:
+
+            <input
+                type="date"
+                name="available_date"
+                required
+            >
+
+            <br><br>
+
+
+            Start Time:
+
+            <input
+                type="time"
+                name="start_time"
+                required
+            >
+
+            <br><br>
+
+
+            End Time:
+
+            <input
+                type="time"
+                name="end_time"
+                required
+            >
+
+            <br><br>
+
+
+            <button type="submit">
+                Add Availability
+            </button>
+
+        </form>
+
+        <br>
+
+        <a href="/availability">
+            View Availability
+        </a>
+
+        <br><br>
+
+        <a href="/">
+            Back to Home
+        </a>
+
+    </div>
+
+</body>
+
+</html>
